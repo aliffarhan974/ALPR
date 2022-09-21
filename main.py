@@ -49,7 +49,7 @@ def argument():
                                                 "the existence of path or filename given and"
                                                 "find the file if nonexistent.",
                                     formatter_class=CustomArgumentFormatter)
-    parse.add_argument('input', metavars='INPUT',  
+    parse.add_argument('input', metavar='INPUT',  
                        help="Root or relative path to input image/video file/folder/text or "
                             "simply give the name of the image or video file")
     parse.add_argument('-d', "--dont_show", action="store_true",
