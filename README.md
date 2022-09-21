@@ -1,5 +1,5 @@
 # ALPR
-ALPR systems using YOLOv4
+ALPR systems using YOLOv4. By default, the system will first check if OpenCV has CUDA and if does, GPU will be used.
 
 ## Usage
 
