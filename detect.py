@@ -71,5 +71,5 @@ def detection(loc, net, args, labels):
             conf.append(confidences[i])
             cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
                         0.5, color, 2)
-    # show the output image
+    # return bounding box coordinates, class names, mean time and confidence level
     return tuple(bboxes), tuple(names), mean_time, tuple(conf)
