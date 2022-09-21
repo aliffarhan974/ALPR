@@ -18,10 +18,10 @@ $ cd ALPR
 $ chmod +x ./main.py
 
 # Run main.py
-$ ./main.py -i input_video_directory
+$ ./main.py input_video_directory
 
 # Using custom weights and configuration files
-$ ./main.py -i input_video_directory -w weights_file_location -c config_file_location
+$ ./main.py input_video_directory -w weights_file_location -c config_file_location
 ```
 
 Windows systems (untested):
