@@ -35,9 +35,8 @@ class CustomArgumentFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.R
 def argument():
     """ Command Line Interface (CLI) side"""
     config_paths = "yolov4-obj.cfg"
-    weights_paths = "yolov4-obj_3000.weights"
+    weights_paths = "yolov4-obj_1000.weights"
     labels_paths = "obj.names"
-    video_paths = "SBG_M01_000.mp4"
     backends = (cv2.dnn.DNN_BACKEND_DEFAULT, cv2.dnn.DNN_BACKEND_HALIDE, cv2.dnn.DNN_BACKEND_INFERENCE_ENGINE,
                 cv2.dnn.DNN_BACKEND_OPENCV, cv2.dnn.DNN_BACKEND_VKCOM, cv2.dnn.DNN_BACKEND_CUDA)
     targets = (cv2.dnn.DNN_TARGET_CPU, cv2.dnn.DNN_TARGET_OPENCL, cv2.dnn.DNN_TARGET_OPENCL_FP16,
@@ -50,7 +49,7 @@ def argument():
                                                 "the existence of path or filename given and"
                                                 "find the file if nonexistent.",
                                     formatter_class=CustomArgumentFormatter)
-    parse.add_argument('-i', '--input', default=video_paths,
+    parse.add_argument('-i', '--input', required=True 
                        help="Root or relative path to input image/video file/folder/text or "
                             "simply give the name of the image or video file")
     parse.add_argument('-d', "--dont_show", action="store_true",
