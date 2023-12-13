@@ -3,7 +3,7 @@ ALPR systems using YOLOv4. By default, the system will first check if OpenCV has
 
 The calculation for accuracy of the detected plates are calculated manually by comparing the detected plates with license plates already in the databasa/list. Firstly, the detected plates number are checked if they are present in the database (e.g., 'MDK8115' in correct_list) and if they are the plate number is promptly chosen as the final result before putting it into a list, for example, final_list (this list is only for 100% accuracy). Then, the digits and characters of detected plates number will be checked against all of the license plates in the database and it will also check if they are in correct order. The detected plates with the highest similarity to the one in database is chosen but if it was similar to the one already in final_list, the program skip the plates and continue the loop.
 
-    ### Example
+    ## Example
 
 | Detected plate               | Confidence | Correct Plate |     final_list       |
 |:----------------------------:|:----------:|--------------:|---------------------:|
